@@ -1,0 +1,12 @@
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Möchtest du deine Gilde wirklich" ) 
+say ( "auflösen? Ich denke deine Member" ) 
+say ( "werden enttäuscht von dir sein.." ) 
+local s = select ( "Ja" , "Nein" ) 
+if s == 1 then 
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Deine Gilde ist nun aufgelöst!" ) 
+pc . destroy_guild ( ) 
+pc . setqf ( "new_disband_time" , get_global_time ( ) ) 
+pc . setqf ( "new_withdraw_time" , get_global_time ( ) ) 
+end 

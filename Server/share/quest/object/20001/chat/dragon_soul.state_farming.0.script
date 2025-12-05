@@ -1,0 +1,3 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( "Du möchtest einen Drachenstein veredeln? Nur zu.[ENTER]Vorher solltest du jedoch wissen, dass dieser[ENTER]Prozess auch fehlschlagen kann.[ENTER]Ich habe gehört, dass die sogenannten[ENTER]Drachenbohnen, die man hinter der drehenden Münze[ENTER]findet, die Chancen verbessert." ) 
+ds . open_refine_window ( ) 

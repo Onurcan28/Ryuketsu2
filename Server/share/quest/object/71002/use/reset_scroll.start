@@ -1,0 +1,8 @@
+say_title ( "Status zurücksetzen" ) 
+say ( "Diese Schriftrolle ermöglicht es dir, all deine[ENTER]bisherigen Status-Steigerungen rückgängig zu[ENTER]machen. Dein ganzer Status ist davon betroffen:[ENTER]VIT, INT, STR und DEX werden auf 1 zurückgesetzt.[ENTER]Die dadurch freigewordenen Punkte kannst du nach[ENTER]Belieben neu verteilen.[ENTER][ENTER]Willst du die Rolle jetzt benutzen?" ) 
+local c = select ( "Ja" , "Nein" ) 
+if 2 == c then 
+return 
+end 
+pc . remove_item ( 71002 ) 
+pc . reset_point ( ) 

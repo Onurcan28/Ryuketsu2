@@ -1,0 +1,23 @@
+quest horse_guard begin
+	state start begin
+		when 20349.chat."Informationen über Pferde" begin
+			local s=number(1, 7)
+			say_title("Stallbursche:")
+			if 1>=s then
+				say("Um eine Pferdequest zu starten, benötigst du eine[ENTER]Pferdemedaille. Du bekommst sie im Affendungeon.")
+			elseif 2>=s then 
+				say("Es gibt Pferde für drei Arten von Reitern:[ENTER]Anfänger, Fortgeschrittene und Experten.[ENTER]Wenn du genug geübt hast und in die nächste[ENTER]Kategorie aufsteigen möchtest, musst du einen[ENTER]Eignungstest bestehen.")
+			elseif 3>=s then 
+				say("Je nach ihrer Belastung durch den Reiter[ENTER]benötigen Pferde unterschiedliche Arten von[ENTER]Futter. Reitanfänger füttern ihre Tiere am besten[ENTER]mit Heu, Fortgeschrittene mit Karotten und[ENTER]Experten, die ihrem Tier viel abverlangen,[ENTER]sollten ausschließlich roten Ginseng verfüttern.[ENTER]In dieser Hinsicht können Pferde sehr wählerisch[ENTER]sein.")
+			elseif 4>=s then 
+				say("Der Zustand des Pferdes wird durch einen[ENTER]einfachen Indikator angezeigt: Bei Grün ist es[ENTER]gesund, im hungrigen Zustand Gelb. Rote Farbe ist[ENTER]gefährlich, denn sie weist auf Unterernährung[ENTER]hin. Du musst dein Pferd füttern, wenn es in den[ENTER]gelben oder gar roten Bereich gekommen ist.[ENTER]Es ist eine ernste Angelegenheit, wenn dein Pferd[ENTER]stirbt.")
+			elseif 5>=s then 
+				say("Während du ein Pferd reitest, nimmt seine[ENTER]Erschöpfung zu und seine Gesundheit ab.[ENTER]Du musst es daher ab und zu rasten lassen, damit[ENTER]es nicht zusammenbricht.")
+			elseif 6>=s then 
+				say("Es sind Gerüchte im Umlauf, dass ein totes Pferd[ENTER]mit Affenkraut wiederbelebt werden kann.[ENTER]Allerdings wird dieses Kraut von den Affen schwer[ENTER]bewacht und ist schwierig zu bekommen.[ENTER]Man sagt, die Affen belegen jeden Kräuterdieb,[ENTER]den sie erwischen, mit einem Fluch, der ihn[ENTER]ebenfalls in einen Affen verwandelt.")
+			elseif 7>=s then 
+				say("Die Fähigkeiten eines Reiters können[ENTER]unterschiedlich sein. Wenn du dich dazu noch im[ENTER]Besitz einer Pferdemedaille befindest, kannst du[ENTER]das Level deines Reittieres verbessern.")
+			end
+		end
+	end	
+end

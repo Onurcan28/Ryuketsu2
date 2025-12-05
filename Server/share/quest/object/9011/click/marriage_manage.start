@@ -1,0 +1,3 @@
+if not pc . is_engaged ( ) and not pc . is_married ( ) then say_title ( "Hochzeitsplanerin:" ) 
+say ( "Du bist Hochzeitgast! Viel Spaﬂ!" ) 
+ return end 

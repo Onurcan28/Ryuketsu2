@@ -1,0 +1,14 @@
+say_title ( mob_name ( 20001 ) ) 
+if pc . count_item ( 30270 ) >= 10 then 
+say ( "Ah, du hast zehn Drachensteinsplitter. Bitte[ENTER]gedulde dich einen Moment ...[ENTER]Erstaunlich! Bei der Transmutation ist ein Cor[ENTER]Draconis entstanden - ein kristallenes[ENTER]Drachenherz, das den Drachenstein schützend[ENTER]umhüllt. Wenn du es aufbrichst, wandert der[ENTER]Drachenstein darin direkt in das Inventar der[ENTER]Drachensteinalchemie.[ENTER]Um Drachensteinsplitter zu finden und zu[ENTER]transmutieren, brauchst du die Macht des[ENTER]Drachenauges. Einmal täglich kann ich sie dir[ENTER]verleihen.[ENTER]Den ersten Drachenstein habe ich dir hergestellt.[ENTER]Die restlichen %d schaffst nun du alleine!" ) 
+pc . remove_item ( 30270 , 10 ) 
+ds . give_qualification ( ) 
+char_log ( pc . get_player_id ( ) , "DS_QUALIFICATION" , "SUCCESS" ) 
+pc . give_item2 ( 50255 ) 
+local today = math . floor ( get_global_time ( ) / 86400 ) 
+pc . setf ( "dragon_soul" , "eye_timestamp" , today ) 
+pc . setf ( "dragon_soul" , "eye_left" , 29 ) 
+set_state ( "state_farming" ) 
+else 
+say ( "He, verschwende keine Zeit! Geh lieber und suche[ENTER]Drachensteinsplitter!" ) 
+end 

@@ -1,0 +1,5 @@
+say_title ( "Yu-Hwan:" ) 
+say ( "Es sind vier Soldaten. Sie sagen, dass sie im Tal[ENTER]von Seungryong von Beschwörern und Peinigern[ENTER]gefoltert und getötet wurden. Ich war derjenige,[ENTER]der sie dorthin beordert hat - in ihren Tod!" ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+command ( "cube open" ) 

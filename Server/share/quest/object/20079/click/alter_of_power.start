@@ -1,0 +1,4 @@
+if npc . get_guild ( ) == pc . get_guild ( ) and pc . is_guild_master ( ) then say_title ( mob_name ( 20079 ) ) 
+say ( "Das Altar ist bereits maxmimal ausgebaut." ) 
+say ( "Ich kann es nicht weiter erweitern." ) 
+ return end 

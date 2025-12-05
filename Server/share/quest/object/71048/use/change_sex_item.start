@@ -1,0 +1,25 @@
+say_title ( "Geschlechtswechsel:" ) 
+if pc . get_level ( ) < 50 then 
+say ( "Du kannst dieses Item erst benutzen, wenn du[ENTER]mindestens Level 50 erreicht hast." ) 
+return 
+elseif pc . is_married ( ) then 
+say ( "Verheiratete Spieler können das Geschlecht nicht[ENTER]wechseln. Diese Option steht nur unverheirateten[ENTER]Spielern offen." ) 
+return 
+elseif pc . is_polymorphed ( ) then 
+say ( "Benutze dieses Item erst, wenn du nicht mehr[ENTER]verwandelt bist." ) 
+return 
+elseif get_time ( ) < pc . getqf ( "next_time" ) then 
+say ( "Du kannst dein Geschlecht nur alle 3 Tage[ENTER]wechseln." ) 
+return 
+elseif pc . get_wear ( 15 ) ~= nil or pc . get_wear ( 16 ) ~= nil then 
+say ( "Bitte lege Kostüm, Frisur und Rüstung ab." ) 
+return 
+end 
+say ( "Hast du dir diesen Schritt gut überlegt?[ENTER]Willst du wirklich dein Geschlecht ändern?[ENTER]Anschließend wirst du automatisch in die Stadt[ENTER]teleportiert." ) 
+local s = select ( "Ja" , "Nein" ) 
+if 1 == s then 
+pc . remove_item ( "71048" , 1 ) 
+pc . setqf ( "next_time" , get_time ( ) + 86400 * 3 ) 
+pc . change_sex ( ) 
+warp_to_village ( ) 
+end 

@@ -1,0 +1,63 @@
+quest Ausbildung begin
+	state start begin
+		when login or levelup with pc.get_level() >= 5 and pc.get_skill_group() == 0 and pc.get_job() != 8 begin
+			set_state(teacher_information)
+			send_letter("Die Ausbildung")
+		end
+	end
+
+	state teacher_information begin
+		when button or info begin
+			if pc.get_skill_group()!=0 then
+				set_state(quest_completed)
+			end
+
+			local skill_group_name_list = {}
+
+			local skill_group_list = {
+				[0] = {"Körper-Kampf-Lehre","Mental-Kampf-Lehre"},
+				[1] = {"Nahkampf-Lehre","Fernkampf-Lehre"},
+				[2] = {"Magische-Waffen-Lehre","Schwarze-Magie-Lehre"},
+				[3] = {"Drachenmacht-Lehre","Lehre der Heilung"}
+			}
+
+			for a = 1, table.getn(skill_group_list[pc.get_job()]) do
+				table.insert(skill_group_name_list, skill_group_list[pc.get_job()][a])
+			end
+
+			table.insert(skill_group_name_list, "Abbrechen")
+
+			say_title("Die Ausbildung")
+			say("Mit der Entscheidung für eine Lehre erhältst du[ENTER]Fertigkeitspunkte. Diese kannst du einsetzen, um[ENTER]Fertigkeiten deiner Wahl zu steigern.")
+
+			local select_job = select2(skill_group_name_list) if skill_group_name_list[select_job] == "Abbrechen" then return end
+
+			if pc.get_skill_group()!=0 then
+				syschat("ERROR")
+				set_state(quest_completed)
+				return
+			end
+
+			pc.set_skill_group(select_job) -- !
+			pc.clear_skill()
+
+			setdelay(0)
+			say_title("Die Ausbildung")
+
+			say("Willkommen!")
+			if not pc.is_clear_skill_group() then
+				setdelay(0)
+				say("Mit der Entscheidung für eine Lehre erhältst du[ENTER]Fertigkeitspunkte. Diese kannst du einsetzen, um[ENTER]Fertigkeiten deiner Wahl zu steigern.")
+				say_title("Information:")
+				say_reward("Du hast Fertigkeitspunkte erhalten.")
+			else
+				setdelay(0)
+				say_reward("Weitere Fertigkeitspunkte werden nicht vergeben,[ENTER]wenn man sich für eine Lehre entschieden hat.")
+			end
+			set_state(quest_completed)
+			clear_letter()
+		end
+	end
+	state quest_completed begin
+	end
+end  

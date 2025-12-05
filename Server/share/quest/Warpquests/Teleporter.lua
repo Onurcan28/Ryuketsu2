@@ -1,0 +1,184 @@
+quest map_warp begin
+	state start begin
+		when 9012.chat."Ich möchte reisen." begin
+			-- Variablen Start
+			local map = pc.get_map_index()
+			local empire = pc.get_empire()
+			local level = pc.get_level()
+			local cost = math.floor(level / 5) * 1000
+			local guild_map_names = {"Jungrang","Waryong","Imha",}
+			guild_map_name = guild_map_names[empire]
+			local warp = {
+				-- guild_map
+					{
+						{ 128500, 1000 },
+						{ 179500, 1000 },
+						{ 271800, 13000 },
+					},
+				-- 64 map_n_threeway
+                    {
+                        { 402100, 673900 },
+                        { 270400, 739900 },
+                        { 321300, 808000 },
+                    },
+				-- 63 metin2_map_n_desert_01
+                    {
+                        { 217800, 627200 },
+                        { 221900, 502700 },
+                        { 344000, 502500 },
+                    },
+				-- 61 map_n_snowm_01
+                    {
+                        { 434200, 290600 },
+                        { 375200, 174900 },
+                        { 491800, 173600 },
+                    },
+				-- 62 metin2_map_n_flame_01
+                    {
+                        { 599400, 756300 },
+                        { 597800, 622200 },
+                        { 730700, 689800 },
+                    },
+				-- devil_tower
+                    {
+                        { 590500, 110500 },
+                        { 590500, 110500 },
+                        { 590500, 110500 },
+                    },
+				-- red_forest
+                    {
+                        { 1119900, 70800 },
+                        { 1119900, 70800 },
+                        { 1119900, 70800 },
+                    },
+				-- spider
+                    {
+                        { 51200, 486400 },
+                        { 51200, 486400 },
+                        { 51200, 486400 },
+                    },
+				--tempel
+                    {
+                        { 553600, 143600 },
+                        { 553600, 143600 },
+                        { 553600, 143600 },
+                    },
+			}
+			local sub_set = 0
+			--Veriablen End
+			say_title("Teleporter:")
+			if map == 1 or map == 3 or map == 21 or map == 23 or map == 41 or map == 43 then
+				say("Dies ist eine faszinierende Gegend. Aber passiert[ENTER]hier denn auch mal etwas Außergewöhnliches? Wohl[ENTER]eher nicht. In anderen Teilen des Landes sieht es[ENTER]mitunter ganz anders aus! Es gibt daher sicher[ENTER]einen interessanten Ort, an den ich dich[ENTER]teleportieren könnte. Da jedoch die Kräfte des[ENTER]Bösen wieder stärker geworden sind, wurden Raum[ENTER]und Zeit ins Chaos gestürzt. Deshalb kann es[ENTER]passieren, dass deine Rückkehr nicht[ENTER]funktioniert. Möchtest du dennoch teleportiert[ENTER]werden?")
+			else
+				say("Möchtest du teleportiert werden?")
+			end
+			local s = select("Ja","Nein")
+			if s == 2 then
+				return
+			end
+			say_title("Teleporter:")			
+			if map == 1 or map == 3 or map == 21 or map == 23 or map == 41 or map == 43 then
+				if level < 60 then
+					say("Ich würde dich auch kostenlos teleportieren, aber[ENTER]ich habe eine große Familie. Um sie zu ernähren,[ENTER]muss ich Geld verdienen.")
+					say(string.format("Es kostet %s Yang.", cost))
+					sub_set = select(guild_map_name, "Tal von Seungryong","Yongbi-Wüste", "Berg Sohan","Abbrechen")
+					if sub_set == 5 then
+						return
+					end
+				else
+					say("Ich würde dich auch kostenlos teleportieren, aber[ENTER]ich habe eine große Familie. Um sie zu ernähren,[ENTER]muss ich Geld verdienen.")
+					say(string.format("Es kostet %s Yang.", cost))
+					sub_set = select(guild_map_name, "Tal von Seungryong", "Yongbi-Wüste", "Berg Sohan","Weiter", "Abbrechen")
+					if sub_set == 6 then
+						return
+					end
+					if sub_set == 5 then
+						say_title("Teleporter:")
+						sub_set = select("Doyyumhwan", "Dämonenturm","Roter Wald", "Spinnendungeon 1", "Hwang-Tempel", "Abbrechen") + 4
+						if sub_set == 10 then
+							return
+						end
+					end
+				end
+				if pc.get_gold() < cost then
+					say_title("Teleporter:")
+					say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+					return
+				end
+				pc.changegold(-cost)
+				pc.warp(warp[sub_set][empire][1], warp[sub_set][empire][2])
+			else
+				if empire== 1 then    
+					sub_set3 = select("Yongan","Jayang", "Abbrechen")
+					if sub_set3 == 1 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(474300,954800)
+					end
+					if sub_set3 == 2 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(353100,882900)
+					end
+					if sub_set3 == 3 then
+						return
+					end
+				elseif  empire == 2 then  
+					local sub_set3 = select("Joan","Bokjung", "Abbrechen")
+					if sub_set3 == 1 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(63800,166400)
+					end
+					if sub_set3 == 2 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(145500,240000)
+					end
+					if sub_set3 == 3 then
+						return
+					end
+				elseif  empire == 3 then 
+					local sub_set3 = select("Pyungmoo","Bakra", "Abbrechen")
+					if sub_set3 == 1 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(959900,269200)
+					end
+					if sub_set3 == 2 then
+						if pc.get_gold() < cost then
+							say_title("Teleporter:")
+							say_reward("Was? Zu wenig Yang?[ENTER]Dann komm wieder, wenn du welches hast.")
+							return
+						end
+						pc.changegold(-cost)
+						pc.warp(863900,246000)
+					end
+					if sub_set3 == 3 then
+						return
+					end
+				end
+			end
+		end
+	end
+end

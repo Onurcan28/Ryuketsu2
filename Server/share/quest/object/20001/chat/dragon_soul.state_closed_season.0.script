@@ -1,0 +1,10 @@
+say_title ( mob_name ( 20001 ) ) 
+local today = math . floor ( get_global_time ( ) / 86400 ) 
+if today == pc . getf ( "dragon_soul" , "eye_timestamp" ) then 
+say ( "Hallo! Du hast die Macht des Drachenauges heute[ENTER]bereits erhalten. Der Vorgang schwächt mich zu[ENTER]sehr, ich kann dir nur einmal pro Tag helfen.[ENTER]Komm morgen wieder!" ) 
+else 
+say ( "Hallo! Ich wette, du bist wegen der Macht des[ENTER]Drachenauges hier. Richtig? Also gut, hier hast[ENTER]du sie. Viel Glück bei der Suche! Ich hoffe, du[ENTER]findest genügend Splitter für zehn Drachensteine!" ) 
+pc . setf ( "dragon_soul" , "eye_timestamp" , today ) 
+pc . setf ( "dragon_soul" , "eye_left" , 30 ) 
+set_state ( "state_farming" ) 
+end 

@@ -1,0 +1,58 @@
+quest neutral_warp begin
+	state start begin
+		when 20009.chat."Hallo!" begin
+			say_title("Alter Mann:")
+			say("Hallo![ENTER]Ich weiß, wie man von hier in eine andere Region[ENTER]kommt. Wenn du mir etwas Yang gibst, kann ich[ENTER]dich dorthin transportieren.")
+			local s = select("Annehmen", "Ablehnen")
+			if 2 == s then return end
+			local cost = 1000
+			say_title("Alter Mann:")
+			say(string.format("Wohin möchtest du?[ENTER]Das kostet dich %s Yang.", cost))
+			if pc.gold < cost then
+				say("Du hast nicht genug Yang!")
+				return
+			end
+			local m = pc.get_map_index()
+			local e = pc.get_empire()
+			if m == 1 or m == 21 or m == 41 then
+				local s = select("Tal von Seungryong", "Berg Sohan", "Abbrechen")
+				if 3 == s then
+					return
+				end
+				local warp = {
+					{
+						{ 402100, 673900 };
+						{ 270400, 739900 };
+						{ 321300, 808000 };
+					};
+					{
+						{ 434200, 290600 };
+						{ 375200, 174900 };
+						{ 491800, 173600 };
+					};
+				};
+				pc.warp(warp[s][e][1], warp[s][e][2])
+				pc.changegold(-cost)
+			elseif m == 3 or m == 23 or m == 43 then
+				local s = select("Yongbi-Wüste", "Doyyumhwan", "Abbrechen")
+				if 3 == s then
+					return
+				end
+				local warp = {
+					{
+						{ 217800, 627200 };
+						{ 221900, 502700 };
+						{ 344000, 502500 };
+					};
+					{
+						{ 599400, 756300 };
+						{ 597800, 622200 };
+						{ 730700, 689800 };
+					};
+				};
+				pc.warp(warp[s][e][1], warp[s][e][2])
+				pc.changegold(-cost)
+			end
+		end
+	end
+end

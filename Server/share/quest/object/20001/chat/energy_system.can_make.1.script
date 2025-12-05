@@ -1,0 +1,54 @@
+local setting = energy_system . setting ( ) 
+local need = 30 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Hast du deine Kraftreserven etwa schon[ENTER]aufgebraucht? Du solltest nicht so hart arbeiten[ENTER]und dein Leben leichtsinnig aufs Spiel setzen.[ENTER]Um einen Energiekristall herzustellen, benötige[ENTER]ich %d Energiesplitter." , need ) ) 
+wait ( ) 
+if pc . get_level ( ) < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Du bist noch nicht stark genug! Komm wieder, wenn[ENTER]du mindestens Level 35 erreichst hast." ) 
+return 
+end 
+if pc . count_item ( setting . energy_stone ) < need then 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Du hast noch nicht genügend Energiesplitter.[ENTER]Daraus kann ich keinen Energiekristall herstellen.Komm wieder, wenn du mindestens %d Splitter[ENTER]gesammelt hast." , need ) ) 
+return 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Sehr schön, du hast die benötigten %d[ENTER]Energiesplitter. Daraus kann ich einen[ENTER]Energiekristall herstellen.[ENTER]Warte bitte einen Moment. Ich werde es versuchen,[ENTER]aber ich kann dir nicht garantieren, dass es[ENTER]funktioniert." , need ) ) 
+wait ( ) 
+end 
+local charge = 1000 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Alles ist bereit, um die Splitter zu einem[ENTER]Energiekristall zu verschmelzen.[ENTER]Doch von irgendetwas muss auch ich leben und[ENTER]meine Werkzeuge fallen nicht einfach so vom[ENTER]Himmel. Ich verlange einen kleinen[ENTER]Unkostenbeitrag von %d Yang. Bist du bereit, zu[ENTER]bezahlen?" , charge ) ) 
+local s = select ( "Selbstverständlich!" , "Nein, jetzt nicht." ) 
+if s == 2 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "In Ordnung, ich werde deine Entscheidung[ENTER]respektieren.[ENTER]Komm wieder, wenn du dich anders entschlossen[ENTER]hast und doch einen Energiekristall benötigst." ) 
+return 
+end 
+if pc . get_gold ( ) < charge then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Tut mir leid, erst musst du bezahlen. Ich bin[ENTER]doch nicht die Wohlfahrt.[ENTER]So läuft das Geschäft - gib mir das Geld, dann[ENTER]werde ich mich an die Arbeit machen." ) 
+return 
+end 
+if pc . count_item ( setting . energy_stone ) < need then 
+return 
+end 
+pc . change_gold ( - charge ) 
+pc . remove_item ( setting . energy_stone , need ) 
+if pc . getqf ( "hasExperience" ) == 0 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Hier, dein Energiekristall. Doch nur der erste[ENTER]Versuch ist immer erfolgreich. Die Alchemie ist[ENTER]eine unberechenbare Wissenschaft - geringfügige[ENTER]Abweichungen führen zum Scheitern! Es besteht[ENTER]also immer ein kleines Risiko, dass das[ENTER]Experiment misslingen kann." ) 
+pc . give_item2 ( setting . charging_stone , 1 ) 
+pc . setqf ( "hasExperience" , 1 ) 
+return 
+end 
+local r = number ( 1 , 100 ) 
+if r > 30 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Leider ist der Versuch fehlgeschlagen. Ich konnte[ENTER]keinen Energiekristall herstellen. Meine Technik[ENTER]ist brillant - aber die Ausführung steckt nun mal[ENTER]voller Risiken. Nicht immer funktioniert alles[ENTER]nach Plan.[ENTER]Beim nächsten Mal haben wir bestimmt Erfolg!" ) 
+return 
+end 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ich wusste es! Meine Technik ist brillant![ENTER]Hier ist dein Energiekristall.[ENTER]Ein Prachtexemplar! Spürst du die Kraft?" ) 
+pc . give_item2 ( setting . charging_stone , 1 ) 

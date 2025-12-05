@@ -1,0 +1,3 @@
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Deine Gilde befindet sich auf:" ) 
+say_reward ( "Platz: " .. guild . get_rank ( ) .. ", mit " .. guild . get_ladder_point ( ) .. " Punkten!" ) 

@@ -1,0 +1,172 @@
+if not npc . lock ( ) then 
+say_title ( "Alte Frau:" ) 
+say ( "Derzeit findet eine andere Hochzeit statt. Bitte[ENTER]warte einen Moment oder komme später wieder!" ) 
+return 
+end 
+if pc . get_level ( ) < 25 then 
+say_title ( "Alte Frau:" ) 
+say ( "Bist du nicht noch zu jung, um zu heiraten? Man[ENTER]braucht viel Verantwortungen für das Eheleben und[ENTER]dazu scheinst du mir noch nicht reif genug. Junge[ENTER]Leute lassen sich zu schnell scheiden, daher[ENTER]werde ich es nicht genehmigen. Du solltest[ENTER]zunächst noch Erfahrungen sammeln." ) 
+say_title ( "Information:" ) 
+say_reward ( "Eine Hochzeit kann erst ab Level 25 durchgeführt[ENTER]werden." ) 
+npc . unlock ( ) 
+return 
+end 
+local m_ring_num = pc . countitem ( 70301 ) 
+local m_has_ring = m_ring_num > 0 
+if not m_has_ring then 
+say_title ( "Alte Frau:" ) 
+say ( "Du möchtest ohne Ring heiraten?" ) 
+say_item ( "Verlobungsring" , 70301 , "" ) 
+say ( "Du musst erst einen Verlobungsring besorgen.[ENTER]Dann darfst du heiraten." ) 
+npc . unlock ( ) 
+return 
+end 
+local m_sex = pc . get_sex ( ) 
+local m_nationality = pc . get_empire ( ) 
+if not marriage_manage . is_equip_wedding_dress ( ) then 
+say_title ( "Alte Frau:" ) 
+say ( "Willst du wirklich so heiraten? Das ist eine[ENTER]wichtige Situation in deinem Leben, du solltest[ENTER]dich daher ein wenig festlicher kleiden." ) 
+if m_sex == 0 then 
+say_item ( "Smoking" , marriage_manage . get_wedding_dress ( m_sex ) , "" ) 
+say_reward ( "Wenn du heiraten möchtest, musst du einen Smoking[ENTER]tragen." ) 
+else 
+say_item ( "Brautkleid" , marriage_manage . get_wedding_dress ( m_sex ) , "" ) 
+say_reward ( "Wenn du heiraten möchtest, musst du ein[ENTER]Brautkleid anziehen." ) 
+end 
+npc . unlock ( ) 
+return 
+end 
+local NEED_MONEY = 1e+06 
+if pc . get_money ( ) < NEED_MONEY then 
+say_title ( "Alte Frau:" ) 
+say ( "Nur mit Liebe allein lässt sich leider keine[ENTER]Hochzeit arrangieren, du benötigst auch etwas[ENTER]Yang. Deine Ersparnisse reichen bisher aber nicht[ENTER]aus. Wenn du eine Million Yang gespart hast,[ENTER]werde ich gerne die Zeremonie planen." ) 
+say_reward ( "Du benötigst eine Million Yang." ) 
+npc . unlock ( ) 
+return 
+end 
+say_title ( "Alte Frau:" ) 
+say ( "Ja, das richtige Alter hast du, ebenfalls den[ENTER]entschlossenen Gesichtsausdruck. Wen möchtest du[ENTER]heiraten?" ) 
+say_reward ( "Bitte gib den Namen der Person an, die du zu[ENTER]heiraten wünschst." ) 
+local sname = input ( ) 
+if sname == "" then 
+say_title ( "Alte Frau:" ) 
+say ( "Bist du so aufgeregt, dass du nicht einmal den[ENTER]Namen niederschreiben kannst? Versuche es noch[ENTER]einmal." ) 
+npc . unlock ( ) 
+return 
+end 
+local u_vid = find_pc_by_name ( sname ) 
+local m_vid = pc . get_vid ( ) 
+if u_vid == 0 then 
+say_title ( "Alte Frau:" ) 
+say ( "Du weißt also den Namen der Person nicht, die du[ENTER]zu heiraten wünschst? Du bist dir aber sicher,[ENTER]dass du eine Hochzeit möchtest?" ) 
+say_reward ( string . format ( "%s ist nicht online." , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+if not npc . is_near_vid ( u_vid , 10 ) then 
+say_title ( "Alte Frau:" ) 
+say ( "Dein Partner muss in der Nähe sein, damit ich die[ENTER]Zeremonie durchführen kann.[ENTER]Bringe ihn also bitte her." ) 
+say_reward ( string . format ( "%s befindet sich zu weit weg." , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+local old = pc . select ( u_vid ) 
+local u_level = pc . get_level ( ) 
+local u_job = pc . get_job ( ) 
+local u_sex = pc . get_sex ( ) 
+local u_nationality = pc . get_empire ( ) 
+local u_name = pc . get_name ( ) 
+local u_gold = pc . get_money ( ) 
+local u_married = pc . is_married ( ) 
+local u_has_ring = pc . countitem ( 70301 ) > 0 
+local u_wear = marriage_manage . is_equip_wedding_dress ( ) 
+pc . select ( old ) 
+local m_level = pc . get_level ( ) 
+if u_vid == m_vid then 
+say_title ( "Alte Frau:" ) 
+say ( "Hier benötige ich nicht deinen Namen, sondern den[ENTER]deines Partners." ) 
+say_reward ( "Gib hier den Namen deines Partners an." ) 
+npc . unlock ( ) 
+return 
+end 
+if u_sex == m_sex then 
+say_title ( "Alte Frau:" ) 
+say ( "Tut mir leid, aber gleichgeschlechtliche Paare[ENTER]kann ich nicht trauen." ) 
+npc . unlock ( ) 
+return 
+end 
+if u_nationality ~= m_nationality then 
+say_title ( "Alte Frau:" ) 
+say ( "Es können nur Paare aus demselben Reich heiraten." ) 
+npc . unlock ( ) 
+return 
+end 
+if u_married then 
+say_title ( "Alte Frau:" ) 
+say ( "Die Person die du zu heiraten wünschst, ist[ENTER]bereits verheiratet. Wusstest du das nicht? Du[ENTER]solltest dir einen ledigen Partner suchen." ) 
+say_reward ( string . format ( "%s ist verheiratet." , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+if u_level < 25 then 
+say_title ( "Alte Frau:" ) 
+say ( "Die Person ist noch nicht bereit für die Ehe.[ENTER]Dein Partner sollte mindestens Level 25 besitzen." ) 
+npc . unlock ( ) 
+return 
+end 
+if m_level - u_level > 15 or u_level - m_level > 15 then 
+say_title ( "Alte Frau:" ) 
+say ( "Es tut mir leid, aber ich kann euch beide nicht[ENTER]trauen. Ihr passt nicht zueinander, da eure[ENTER]Erfahrungs-Differenz mehr als 15 Level beträgt." ) 
+npc . unlock ( ) 
+return 
+end 
+if not u_has_ring then 
+if m_ring_num >= 2 then 
+say_title ( "Alte Frau:" ) 
+say ( "Nun tauscht die Ringe. " ) 
+else 
+say ( "Die Heiraten ist eine wichtige Angelegenheit im[ENTER]Leben, da hätte dein Partner doch wenigstens[ENTER]einen Ehering mitbringen können? " ) 
+end 
+say_item ( "Verlobungsring" , 70301 , "" ) 
+say_title ( "Alte Frau:" ) 
+say ( "Dein Partner muss ebenfalls einen Ehering bei[ENTER]sich haben. " ) 
+npc . unlock ( ) 
+return 
+end 
+if not u_wear then 
+say_title ( "Alte Frau:" ) 
+say ( "Dein Partner trägt gar kein Hochzeitsgewand![ENTER]Ist dir das nicht peinlich? " ) 
+if u_sex == 0 then 
+say_title ( "Alte Frau:" ) 
+say_item ( "Smoking" , marriage_manage . get_wedding_dress ( u_sex ) , "" ) 
+say ( "Dein Partner muss einen Smoking tragen." ) 
+else 
+say_title ( "Alte Frau:" ) 
+say_item ( "Brautkleid" , marriage_manage . get_wedding_dress ( u_sex ) , "" ) 
+say ( "Deine Partnerin muss ein Brautkleid tragen." ) 
+end 
+npc . unlock ( ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , string . format ( "%s hat dir einen Heiratsantrag gemacht. Annehmen?" , pc . get_name ( ) ) , 30 ) 
+if ok_sign == CONFIRM_OK then 
+local m_name = pc . get_name ( ) 
+if pc . get_gold ( ) >= NEED_MONEY then 
+pc . change_gold ( - NEED_MONEY ) 
+pc . removeitem ( 70301 , 1 ) 
+pc . give_item2 ( 70302 , 1 ) 
+local old = pc . select ( u_vid ) 
+pc . removeitem ( 70301 , 1 ) 
+pc . give_item2 ( 70302 , 1 ) 
+pc . select ( old ) 
+say_title ( "Alte Frau:" ) 
+say ( "Nun ist es so weit: Ihr zwei habt den Bund der[ENTER]Ehe geschlossen und könnt nun ein wenig Zeit[ENTER]miteinder verbringen. Ich werde euch zu der Insel[ENTER]der Liebenen schicken. Eine lange und glückliche[ENTER]Ehe wünsche ich euch, meine Gratulation.[ENTER]Demnächst wirst du automatisch zur Insel der[ENTER]Liebenen geschickt. " ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+marriage . engage_to ( u_vid ) 
+end 
+else 
+say_title ( "Alte Frau:" ) 
+say ( "Dein Partner hat anscheinend nicht die Absicht,[ENTER]dich zu heiraten. Vielleicht solltest du das[ENTER]zunächst klären. " ) 
+end 
+npc . unlock ( ) 

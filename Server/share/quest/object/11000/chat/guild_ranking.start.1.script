@@ -1,0 +1,3 @@
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Hier siehst du die besten Gilden." ) 
+say ( guild . high_ranking_string ( ) .. "[/DELAY]" ) 

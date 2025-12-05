@@ -1,0 +1,3 @@
+if horse . get_level ( ) == 0 then say ( "Du besitzt momentan kein Pferd." ) 
+ return end if horse . get_level ( ) >= 1 and horse . get_level ( ) < 11 then horse . summon ( ) 
+ return end 

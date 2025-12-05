@@ -1,0 +1,7 @@
+say ( "Die Macht des Drachenauges hat dich verlassen." ) 
+local today = math . floor ( get_global_time ( ) / 86400 ) 
+if today == pc . getf ( "dragon_soul" , "eye_timestamp" ) then 
+say ( "Geh morgen zum Alchemisten zurück, um dir erneut[ENTER]die Macht des Drachenauges abzuholen!" ) 
+else 
+say ( "Geh zum Alchemisten, um dir die Macht des[ENTER]Drachenauges abzuholen!" ) 
+end 

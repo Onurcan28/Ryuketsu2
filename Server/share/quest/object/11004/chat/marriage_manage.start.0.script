@@ -1,0 +1,82 @@
+if not marriage_manage . check_divorce_time ( ) then 
+return 
+end 
+local u_vid = marriage . find_married_vid ( ) 
+if u_vid == 0 or not npc . is_near_vid ( u_vid , 10 ) then 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Es ist nicht möglich, in Abwesenheit deines[ENTER]Partners eine Scheidung durchzuführen. Ihr müsst[ENTER]noch einmal zusammen wiederkommen." ) 
+return 
+end 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Für die rechtmäßige Scheidung benötigst du[ENTER]500.000 Yang und das Einverständnis deines[ENTER]Partners.[ENTER]Willst du dich wirklich scheiden lassen?" ) 
+local MONEY_NEED_FOR_ONE = 500000 
+local s = select ( "Ja." , "Nein, war nur ein Scherz." ) 
+if s == 1 then 
+local m_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . get_gold ( ) > MONEY_NEED_FOR_ONE 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if not m_have_ring then 
+say ( "Den Ehering bitte." ) 
+return ; 
+end 
+if not u_have_ring then 
+say ( "Auch dein Partner muss seinen Ring hier bei sich[ENTER]haben." ) 
+return ; 
+end 
+if not m_enough_money then 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Die Summe reicht leider nicht, um die Scheidung[ENTER]durchzuführen." ) 
+say_reward ( string . format ( "Um sich scheiden zu lassen, benötigt man %s Yang." , MONEY_NEED_FOR_ONE ) ) 
+return ; 
+end 
+if not u_enough_money then 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Die Summe reicht leider nicht, um die Scheidung[ENTER]durchzuführen." ) 
+say_reward ( "Man benötigt 500.000 Yang für eine Scheidung." ) 
+return ; 
+end 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Willst du dich wirklich scheiden lassen?[ENTER]Das ist eine Entscheidung, die man nicht[ENTER]leichtfertig fällen sollte." ) 
+local c = select ( "Ja." , "Nein. Ich habe meine Meinung geändert." ) 
+if 2 == c then 
+say_pc_name ( ) 
+say ( "Ich habe meine Meinung geändert.[ENTER]Ich möchte mich nicht scheiden lassen." ) 
+wait ( ) 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Es ist besser auf diese Weise. Ich wünsche dir[ENTER]ein langes und schönes Leben." ) 
+say_reward ( "Die Scheidung ist vollzogen." ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , "Bist du einverstanden mit der Scheidung?" , 30 ) 
+if ok_sign == CONFIRM_OK then 
+local m_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if m_have_ring and m_enough_money and u_have_ring and u_enough_money then 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - MONEY_NEED_FOR_ONE ) 
+local old = pc . select ( u_vid ) 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - MONEY_NEED_FOR_ONE ) 
+pc . select ( old ) 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Die Scheidung ist vollzogen.[ENTER]Ihr seid nun geschieden." ) 
+say_reward ( "Die Scheidung ist vollzogen." ) 
+marriage . remove ( ) 
+else 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Diese Unterlagen sind nicht vollständig.[ENTER]Du musst daher noch einmal wiederkommen." ) 
+say_reward ( "Die Scheidung wird für ungültig erklärt." ) 
+end 
+else 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Der Partner verweigert die Scheidung.[ENTER]Ihr solltet dies zunächst klären." ) 
+say_reward ( "Die Scheidung wird für ungültig erklärt." ) 
+end 
+end 

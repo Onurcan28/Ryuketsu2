@@ -1,0 +1,13 @@
+local t = marriage . get_wedding_list ( ) 
+if table . getn ( t ) == 0 then 
+say_title ( "Alte Frau:" ) 
+say ( "Es findet zurzeit keine Hochzeit statt." ) 
+else 
+local wedding_names = { } 
+table . foreachi ( t , function ( n , p ) wedding_names [ n ] = string . format ( "Hochzeit von %s und %s" , p [ 3 ] , p [ 4 ] ) end ) 
+wedding_names [ table . getn ( t ) + 1 ] = "Bestätigen" 
+local s = select_table ( wedding_names ) 
+if s ~= table . getn ( wedding_names ) then 
+marriage . join_wedding ( t [ s ] [ 1 ] , t [ s ] [ 2 ] ) 
+end 
+end 

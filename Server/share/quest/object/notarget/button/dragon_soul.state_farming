@@ -1,0 +1,2 @@
+say_title ( "Macht des Drachenauges" ) 
+say ( string . format ( "Verbleibende Macht des Drachenauges: %d" , pc . getf ( "dragon_soul" , "eye_left" ) ) ) 

@@ -1,0 +1,2 @@
+if horse . get_level ( ) == 21 then horse . summon ( ) 
+ return end 

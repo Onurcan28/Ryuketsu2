@@ -1,0 +1,5 @@
+say_title ( "Alte Frau:" ) 
+say ( "Warum bist du immer noch hier?[ENTER]Dein Partner wartet bereits sehnsüchtig auf dich.[ENTER]Du solltest rasch folgen. " ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+marriage . warp_to_my_marriage_map ( ) 

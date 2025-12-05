@@ -1,0 +1,32 @@
+if pc . getqf ( "pw" ) == 0 then 
+say_title ( "Lagerverwalter:" ) 
+say ( "Für die Benutzung des Lagers musst du etwas[ENTER]zahlen. Ich bin heute allerdings in so guter[ENTER]Stimmung, dass ich es dir für lächerliche 500[ENTER]Yang anbiete. Wie wäre es? Das ist ein guter[ENTER]Preis!" ) 
+local s = select ( "Zahlen" , "Nicht Zahlen" ) 
+if s == 2 then 
+return 
+end 
+if pc . get_gold ( ) < 500 then 
+say_title ( "Lagerverwalter:" ) 
+say ( "Wie bitte? Du hast nicht genügend Yang?[ENTER]Dann komm später wieder, wenn du genügend hast." ) 
+return 
+end 
+say_title ( "Lagerverwalter:" ) 
+say ( "So, dein Lager ist eröffnet.[ENTER]Wenn du es benutzen möchtest, sprich einfach mit[ENTER]mir. Das Passwort für dein Lager ist:" ) 
+say_reward ( "000000" ) 
+pc . change_gold ( - 500 ) 
+game . set_safebox_level ( 1 ) 
+pc . setqf ( "pw" , 1 ) 
+elseif pc . getqf ( "pw" ) == 1 then 
+say_title ( "Lagerverwalter:" ) 
+say ( "Willkommen. Ich bin der Lagerverwalter dieses[ENTER]Dorfes. Du kannst meine Dienste in Anspruch[ENTER]nehmen, wenn du nicht dein gesamtes Hab und Gut[ENTER]mit dir herumtragen möchtest. In meinem Lagerhaus[ENTER]kannst du einen Teil davon aufbewahren." ) 
+local f = select ( "Lager öffnen" , "Itemshoplager öffnen" , "Abbrechen" ) 
+if f == 1 then 
+game . open_safebox ( ) 
+setskin ( NOWINDOW ) 
+elseif f == 2 then 
+game . open_mall ( ) 
+setskin ( NOWINDOW ) 
+elseif f == 3 then 
+return 
+end 
+end 

@@ -1,0 +1,13 @@
+say_title ( "Stallbursche:" ) 
+say ( "Du hast das Militär-Pferdebuch verloren![ENTER]Die Gebühr für die Neuausgabe beträgt 500.000[ENTER]Yang." ) 
+local b = select ( "Kaufen" , "Nicht Kaufen" ) 
+if 1 == b then 
+say_title ( "Stallbursche:" ) 
+if pc . money >= 500000 then 
+pc . changemoney ( - 500000 ) 
+say ( "Dies ist das neu ausgegebene Militär-Pferdebuch.[ENTER]Verliere es nicht wieder." ) 
+pc . give_item2 ( "50053" , 1 ) 
+else 
+say ( "Du hast nicht genügend Yang." ) 
+end 
+end 

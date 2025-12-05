@@ -1,0 +1,2 @@
+say_title ( "Fischer:" ) 
+say ( "Du bist also an den Geheimnissen zur Verbesserung[ENTER]deiner Angelrute interessiert? Eigentlich gibt es[ENTER]da nicht wirklich ein Geheimnis. Wenn du Zeit mit[ENTER]Fischen verbringst, sammelt deine Angelrute[ENTER]Punkte. Sobald diese ihren Höchststand erreicht[ENTER]haben, bringst du die Angel zu mir. Dann kann ich[ENTER]versuchen, sie für dich zu verbessern.[ENTER]Gut. Wähle also nun die Angelrute, die du zu[ENTER]verbessern wünschst und gib sie mir." ) 

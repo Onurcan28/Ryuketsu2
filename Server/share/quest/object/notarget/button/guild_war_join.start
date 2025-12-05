@@ -1,0 +1,14 @@
+local e = guild . get_any_war ( ) 
+say_title ( "Gildenkrieg" ) 
+if e == 0 then 
+say ( "Der Gildenkrieg ist bereits beendet." ) 
+else 
+say ( "Möchtest du den Gildenkrieg beitreten?" ) 
+local s = select ( "Beitreten" , "Abbrechen" ) 
+if s == 1 then 
+guild . war_enter ( e ) 
+else 
+setskin ( NOWINDOW ) 
+makequestbutton ( "Gildenkrieg beitreten" ) 
+end 
+end 

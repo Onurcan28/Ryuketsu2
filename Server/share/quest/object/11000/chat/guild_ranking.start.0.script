@@ -1,0 +1,3 @@
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Hier siehst du den Gildenrang deiner Gilde." ) 
+say ( guild . around_ranking_string ( ) .. "[/DELAY]" ) 

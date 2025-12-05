@@ -1,0 +1,13 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( "Hat es funktioniert? Hast du Energiesplitter[ENTER]bekommen?[ENTER]Bring mir mehr Gegenstände und ich werde sie[ENTER]mithilfe der Alchemie zerbrechen.[ENTER]Meine Technik ist noch nicht ganz ausgefeilt.[ENTER]Deswegen kann ich dir nicht garantieren, wie[ENTER]viele Splitter du erhältst." ) 
+wait ( ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Es gibt eine Bedingung: Sowohl dein eigener als[ENTER]auch der Level des Gegenstandes muss mindestens[ENTER]35 sein.[ENTER]Hm, schauen wir einfach mal ..." ) 
+wait ( ) 
+if pc . get_level ( ) < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Du bist noch nicht stark genug! Komm wieder, wenn[ENTER]du mindestens Level 35 erreichst hast." ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ah, ausgezeichnet! Du bist stark und erfahren.[ENTER]Gib mir den Gegenstand, den ich verarbeiten soll." ) 
+end 

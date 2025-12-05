@@ -1,0 +1,44 @@
+if pc . get_level ( ) < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Du bist noch nicht stark genug, um die Kraft, die[ENTER]den Energiesplittern innewohnt, zu beherrschen.[ENTER]Komm wieder, wenn du mindestens Level 35 erreicht[ENTER]hast." ) 
+return 
+end 
+local item_vnum = item . vnum local levelLimit = item . get_level_limit ( item_vnum ) 
+local setting = energy_system . setting ( ) 
+if levelLimit == nil then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Du bist noch nicht stark genug, um die Kraft, die[ENTER]den Energiesplittern innewohnt, zu beherrschen.[ENTER]Komm wieder, wenn du mindestens Level 35 erreicht[ENTER]hast." ) 
+wait ( ) 
+elseif item . get_type ( ) == ITEM_WEAPON and item . get_sub_type ( ) == WEAPON_ARROW then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Dieser Gegenstand eignet sich nicht für meine[ENTER]Technik. Bring mir etwas Anderes." ) 
+wait ( ) 
+elseif levelLimit < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Dieser Gegenstand hat nicht genug Energie.[ENTER]Bring mir einen mit mindestens Level 35 - nur[ENTER]dann kann ich mit meiner Technik seine Kraft[ENTER]herauspressen." ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( item_name ( item_vnum ) ) 
+say ( "Soll ich diesen Gegenstand zerstören?" ) 
+local s = select ( "Ja!" , "Nein, noch nicht!" ) 
+if s == 1 then 
+item . remove ( ) 
+local r = number ( 1 , 100 ) 
+local n 
+if levelLimit >= 35 and levelLimit <= 50 then 
+n = energy_system . getItemNum ( "35to50" , r ) 
+elseif levelLimit > 50 and levelLimit <= 70 then 
+n = energy_system . getItemNum ( "51to70" , r ) 
+else 
+n = energy_system . getItemNum ( "upto70" , r ) 
+end 
+if ( n == 0 ) then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ich habe versagt - leider konnte ich keinen[ENTER]Energiesplitter extrahieren. Vielleicht klappt es[ENTER]beim nächsten Versuch." ) 
+else 
+pc . give_item2 ( setting . energy_stone , n ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Sagenhaft! Ich konnte %d Energiesplitter finden.[ENTER]Bitte sehr." , n ) ) 
+end 
+end 
+end 

@@ -1,0 +1,28 @@
+if not marriage_manage . check_divorce_time ( ) then 
+return 
+end 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Du benötigst eine Million Yang für die einseitige[ENTER]Scheidung. Bist du sicher, dass du dich scheiden[ENTER]lassen willst?" ) 
+local s = select ( "Ja." , "Nein, ich wollte nur einmal nachfragen." ) 
+if s == 2 then 
+return 
+end 
+local NEED_MONEY = 1e+06 
+if pc . get_money ( ) < NEED_MONEY then 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Deine Ersparnisse reichen nicht aus für eine[ENTER]Scheidung. Du benötigst dazu genauso viel Yang[ENTER]wie für deine Hochzeit." ) 
+return 
+end 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Bist du dir sicher, dass du dich scheiden lassen[ENTER]willst?" ) 
+local c = select ( "Ja, ich will." , "Ich sollte das noch einmal überdenken." ) 
+if c == 2 then 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Nun, womöglich ist es besser so. Wenn du sicher[ENTER]bist, dass du es wirklich möchtest, dann komme[ENTER]noch einmal wieder." ) 
+return 
+end 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_gold ( - NEED_MONEY ) 
+marriage . remove ( ) 
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Da du dir sicher bist, werde ich die Scheidung[ENTER]nun vollziehen. Ich wünsche euch dennoch alles[ENTER]Gute für die Zukunft." ) 

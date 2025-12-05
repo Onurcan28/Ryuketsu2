@@ -1,0 +1,20 @@
+WELCOME_MSG = "DB Server has been started"
+
+SQL_PLAYER = "localhost player root fratello 0"
+SQL_ACCOUNT = "localhost account root fratello 0"
+SQL_COMMON = "localhost common root fratello 0"
+
+TABLE_POSTFIX = ""
+NO_TXT = 1
+BIND_PORT               = 15000
+DB_SLEEP_MSEC           = 10
+CLIENT_HEART_FPS        = 10
+HASH_PLAYER_LIFE_SEC    = 600
+BACKUP_LIMIT_SEC        = 3600
+PLAYER_ID_START = 100
+PLAYER_DELETE_LEVEL_LIMIT = 99
+PLAYER_DELETE_CHECK_SIMPLE = 1
+
+ITEM_ID_RANGE = 2000000000 2100000000
+
+MIN_LENGTH_OF_SOCIAL_ID	= 6

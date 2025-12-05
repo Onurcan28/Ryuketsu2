@@ -1,0 +1,8 @@
+say_title ( "" .. mob_name ( 60003 ) .. ":" ) 
+say ( "Möchtest du Boni von deiner Waffe oder Rüstung[ENTER]aufnehmen?" ) 
+local confirm = select ( "Ja" , "Nein" ) 
+if confirm == 2 then 
+return 
+end 
+setskin ( NOWINDOW ) 
+pc . acce_open_absorb ( ) 

@@ -1,0 +1,32 @@
+if npc . get_guild ( ) == pc . get_guild ( ) and pc . isguildmaster ( ) then say_title ( mob_name ( npc . race ) ) 
+say ( "Für 3.000.000 Yang können Sie mich spezialisieren." ) 
+if pc . get_gold ( ) < 3e+06 then 
+say_reward ( "Du hast zu wenig Yang." ) 
+else 
+say ( "Welche Spezialisierung wollen sie?" ) 
+local sel = 0 
+local timetable1 = { "Diamanten" , "Fossilholz" , "Kupfer" , "Silber" , "Gold" , "Jade" , "Weiter" , "Keine Änderung" } 
+local valuetable1 = { 14043 , 14045 , 14046 , 14047 , 14048 , 14049 , 0 , - 1 } 
+local timetable2 = { "Ebenholz" , "Perle" , "Weissgold" , "Kristall" , "Amethyst" , "Himmelsträne" , "Zurück" , "Keine Änderung" } 
+local valuetable2 = { 14050 , 14051 , 14052 , 14053 , 14054 , 14055 , 0 , - 1 } 
+repeat 
+local s = select_table ( timetable1 ) 
+sel = valuetable1 [ s ] 
+if sel == 0 then 
+local s = select_table ( timetable2 ) 
+sel = valuetable2 [ s ] 
+end 
+until sel ~= 0 
+if sel ~= - 1 then 
+npc_num = sel + 20060 - 14043 
+if npc_num == npc . get_race ( ) then 
+say ( "Das bin ich doch bereits." ) 
+else 
+pc . changegold ( - 3e+06 ) 
+building . reconstruct ( sel ) 
+end 
+else 
+say ( "Dann eben nicht." ) 
+end 
+end 
+ return end 

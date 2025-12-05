@@ -1,0 +1,5 @@
+say_title ( "Baek-Go:" ) 
+say ( "Sei gegrüßt! Hast du Interesse am Kauf von[ENTER]Tränken, die dich stärken oder gar heilen können?[ENTER]Ich bin Mediziner und habe mich daher lange Jahre[ENTER]mit der Herstellung solcher Tränke beschäftigt.[ENTER]Ich verfüge über einige Rezepte, die nirgendwo[ENTER]sonst erhältlich sind. Möchtest du sie[ENTER]ausprobieren?" ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+command ( "cube open" ) 

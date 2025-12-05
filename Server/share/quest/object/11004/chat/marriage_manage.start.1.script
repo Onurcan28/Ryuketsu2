@@ -1,0 +1,4 @@
+say_title ( "Wächter des Dorfplatzes:" ) 
+say ( "Unangenehme Erinnerungen sollte man schnell[ENTER]hinter sich lassen." ) 
+say_reward ( "Der Ehering wurde weggesteckt." ) 
+pc . remove_item ( 70302 ) 

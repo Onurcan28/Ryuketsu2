@@ -1,0 +1,5 @@
+say_title ( "Huahn-So:" ) 
+say ( "Ich habe ein geheimes Rezept gefunden, das sich[ENTER]seit Langem im Besitz meiner Familie befindet.[ENTER]Damit kann ich einen Trank brauen, der dich[ENTER]nahezu unverwundbar macht! Hast du Interesse[ENTER]daran, meine Tränke auszuprobieren?" ) 
+wait ( ) 
+setskin ( NOWINDOW ) 
+command ( "cube open" ) 

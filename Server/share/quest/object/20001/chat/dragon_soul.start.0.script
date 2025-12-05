@@ -1,0 +1,4 @@
+target . delete ( "__TARGET__" ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ah, da bist du ja! Ich habe etwas Erstaunliches[ENTER]entdeckt: das Fragment eines Drachensteins! Ein[ENTER]Drachenstein ist ein äußerst seltener und[ENTER]wertvoller Kristall mit großer Macht. Es heißt,[ENTER]das sei die Seele eines Drachen. Unfassbar schön![ENTER]Ich verleihe dir die Macht des Drachenauges,[ENTER]damit du die Splitter aufspüren kannst.[ENTER]Bringe mir insgesamt zehn Drachensteinsplitter.[ENTER]Diese kann ich zu einem ganzen Stein[ENTER]transmutieren." ) 
+set_state ( "state_learning" ) 

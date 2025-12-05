@@ -1,0 +1,28 @@
+if game . get_event_flag ( "guild_withdraw_delay" ) * 86400 > 
+get_global_time ( ) - pc . getqf ( "new_withdraw_time" ) or 
+game . get_event_flag ( "guild_disband_delay" ) * 86400 > 
+get_global_time ( ) - pc . getqf ( "new_disband_time" ) then 
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Du kannst jetzt noch keine neue Gilde gründen!" ) 
+say ( "Warte noch eine Weile!" ) 
+return 
+end 
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Um eine neue Gilde zu gründen" ) 
+say ( "brauchst du:" ) 
+say ( "-Level 40" ) 
+say ( "-500.000 Yang" ) 
+say ( "Möchtest du eine Gilde gründen?" ) 
+local s = select ( "Ja" , "Nein" ) 
+if s == 2 then 
+return 
+elseif pc . get_level ( ) < 40 then 
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Du bist noch nicht Level 40." ) 
+return 
+elseif pc . get_gold ( ) < 500000 then 
+say_title ( "Wächter des Dorfplatzes" ) 
+say ( "Du hast keine 500.000 Yang." ) 
+return 
+end 
+game . request_make_guild ( ) 
