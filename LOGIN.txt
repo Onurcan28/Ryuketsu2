@@ -1,0 +1,14 @@
+Navicat -> File -> New Connection
+MariaDB auswählen
+
+Connection Name: Fliege V3
+Host: Eure Server IP
+Port: 3306
+User Name: root
+Password: fratello
+
+
+Ingame Login
+
+ID: admin
+PW: fratello

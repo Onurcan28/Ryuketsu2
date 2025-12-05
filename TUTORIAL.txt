@@ -1,0 +1,94 @@
+================================================================================
+		FreeBSD 14.3 - MariaDB 11.8.3 - Metin2 Server Tutorial by Fratello		
+							Discord: FRATELLO_EXE								
+================================================================================
+
+
+================================================================================
+								SCHRITT 1:										
+================================================================================
+
+1.	Geht zb auf ovh.com -> Virtual Private Server
+2.	Holt euch einen Root-Server
+3.	Wählt FreeBSD 14.3 als Betriebssystem
+4.	Wartet bis der Server fertig ist, ihr bekommt die IP + Root Passwort per Mail
+
+
+================================================================================
+								SCHRITT 2:										
+================================================================================
+
+5.	WinSCP öffnen und mit eurem Server verbinden (IP + root + Passwort)
+6.	mysql.tar.gz aus dem FreeBSD Ordner nach /var/db hochladen
+7.	game.tar.gz nach /usr/home hochladen
+8.	source.tar.gz nach /usr/home hochladen
+
+
+================================================================================
+								SCHRITT 3:										
+================================================================================
+
+9.	PuTTY öffnen und mit eurem Server verbinden (IP + root + Passwort)
+10.	pkg install python
+11.	pkg install gmake
+12.	pkg install -y mariadb118-server mariadb118-client
+
+
+================================================================================
+								SCHRITT 4:										
+================================================================================
+
+13.	/etc/rc.conf bearbeiten
+14.	mysql_enable="YES" eintragen und speichern
+15.	service mysql-server start
+16.	/usr/local/etc/mysql/conf.d/server.cnf bearbeiten
+17.	bind-address = 127.0.0.1  ändern zu  bind-address = 0.0.0.0
+18.	service mysql-server stop
+
+
+================================================================================
+								SCHRITT 5:										
+================================================================================
+
+19.	cd /var/db
+20.	rm -rf mysql
+21.	tar -xf mysql.tar.gz
+22.	service mysql-server start
+
+
+================================================================================
+								SCHRITT 6:										
+================================================================================
+
+23.	cd /usr/home
+24.	tar -xf game.tar.gz
+25.	tar -xf source.tar.gz
+
+
+================================================================================
+								SCHRITT 7:										
+================================================================================
+
+26.	cd /usr/home/game && sh index.sh
+
+
+================================================================================
+								SCHRITT 8:										
+================================================================================
+
+27.	Im Client unter root/serverinfo.py eure Server-IP eintragen
+(markiert mit # Change your IP here)
+
+
+================================================================================
+								FEHLERBEHEBUNG									
+================================================================================
+
+Falls Fehler "libstdc++.so.6 not found" kommt:
+-> Die Datei aus dem libs Ordner nach /usr/lib32 kopieren
+
+
+================================================================================
+		FreeBSD 14.3 - MariaDB 11.8.3 - Metin2 Server Tutorial by Fratello		
+							Discord: FRATELLO_EXE								
+================================================================================

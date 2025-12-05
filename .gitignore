@@ -1,0 +1,60 @@
+# Extern folder (Client)
+*.vs
+
+# Common build files extension
+*.db
+*.db-shm
+*.opendb
+*.db-wal
+*.vsidx
+*.ipch
+*.suo
+*.recipe
+*.obj
+*.pdb
+*.pch
+*.tlog
+*.sbr
+*.bsc
+*.map
+*.cod
+*.log
+*.res
+*.idb
+*.ilk
+*.iobj
+*.ipdb
+*.FileListAbsolute.txt
+*.o
+
+# Makedepend and game-db binaries freebsd
+Source/game-src/source/game/game
+Source/game-src/source/game/src/Depend
+Source/game-src/source/**/*.lib
+Source/game-src/source/**/*.exe
+
+Source/binary-src/source/db/db
+Source/binary-src/source/db/src/Depend
+Source/binary-src/source/**/*.lib
+Source/binary-src/source/**/*.exe
+
+# Windows Server
+WServer/
+
+# Client files
+Client/Metin2Release.exe
+Client/Metin2Debug.exe
+Client/screenshot/*
+Client/pack/*.epk
+Client/pack/*.eix
+Client/logs/log.txt
+Client/logs/syserr.txt
+Client/ErrorLog.txt
+Client/channel.inf
+Client/metin2.cfg
+Client/mouse.cfg
+Client/config.cfg
+
+# Ignore build quests
+Locale-Server/germany/quest/object/*
+Locale-Server/germany/quest/pre_qc/*

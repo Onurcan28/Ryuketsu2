@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{00ACBC7F-38B1-4F77-82EE-C5097D83275A}</ProjectGuid>
+    <RootNamespace>db</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\db\</OutDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\FreeBSD\rapidjson;$(SolutionDir)extern\FreeBSD\boost;$(SolutionDir)extern\FreeBSD\mysql;$(SolutionDir)source\libsql\src;$(SolutionDir)..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_USE_32BIT_TIME_T;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4267;4244;4172</DisableSpecificWarnings>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)extern\Windows\mysql\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;wsock32.lib;secur32.lib;crypt32.lib;shlwapi.lib;iphlpapi.lib;mariadbclient.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\db\src\Cache.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerBoot.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerEventFlag.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerGuild.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerHorseName.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerLogin.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerParty.cpp" />
+    <ClCompile Include="..\..\source\db\src\ClientManagerPlayer.cpp" />
+    <ClCompile Include="..\..\source\db\src\Config.cpp" />
+    <ClCompile Include="..\..\source\db\src\CsvReader.cpp" />
+    <ClCompile Include="..\..\source\db\src\DBManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\GuildManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\ItemAwardManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\ItemIDRangeManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\LoginData.cpp" />
+    <ClCompile Include="..\..\source\db\src\Main.cpp" />
+    <ClCompile Include="..\..\source\db\src\Marriage.cpp" />
+    <ClCompile Include="..\..\source\db\src\NetBase.cpp" />
+    <ClCompile Include="..\..\source\db\src\Peer.cpp" />
+    <ClCompile Include="..\..\source\db\src\PeerBase.cpp" />
+    <ClCompile Include="..\..\source\db\src\PrivManager.cpp" />
+    <ClCompile Include="..\..\source\db\src\ProtoReader.cpp" />
+    <ClCompile Include="..\..\source\db\src\version.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\db\src\Cache.h" />
+    <ClInclude Include="..\..\source\db\src\ClientManager.h" />
+    <ClInclude Include="..\..\source\db\src\Config.h" />
+    <ClInclude Include="..\..\source\db\src\CsvReader.h" />
+    <ClInclude Include="..\..\source\db\src\DBManager.h" />
+    <ClInclude Include="..\..\source\db\src\GuildManager.h" />
+    <ClInclude Include="..\..\source\db\src\ItemAwardManager.h" />
+    <ClInclude Include="..\..\source\db\src\ItemIDRangeManager.h" />
+    <ClInclude Include="..\..\source\db\src\LoginData.h" />
+    <ClInclude Include="..\..\source\db\src\Main.h" />
+    <ClInclude Include="..\..\source\db\src\Marriage.h" />
+    <ClInclude Include="..\..\source\db\src\NetBase.h" />
+    <ClInclude Include="..\..\source\db\src\Peer.h" />
+    <ClInclude Include="..\..\source\db\src\PeerBase.h" />
+    <ClInclude Include="..\..\source\db\src\PrivManager.h" />
+    <ClInclude Include="..\..\source\db\src\ProtoReader.h" />
+    <ClInclude Include="..\..\source\db\src\QID.h" />
+    <ClInclude Include="..\..\source\db\src\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libgame\libgame.vcxproj">
+      <Project>{98391ed1-7501-4ce1-81cf-1b65e59193f7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libpoly\libpoly.vcxproj">
+      <Project>{b8c58a0c-b12f-47af-ba26-06bf798c14f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libsql\libsql.vcxproj">
+      <Project>{62745e84-c57e-4d0b-815a-fd0a0725a6f9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libthecore\libthecore.vcxproj">
+      <Project>{be7bb054-64e8-40b2-8c72-197aa063ec6d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

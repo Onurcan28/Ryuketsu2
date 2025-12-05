@@ -1,0 +1,155 @@
+PACK
+*
+locale_de
+*
+pc_warrior
+*
+pc_assassin
+*
+pc_sura
+*
+pc_shaman
+*
+pc_common
+*
+pc_wolfman
+*
+season
+*
+map_patch1
+*
+map_patch2
+*
+map_patch3
+*
+map_event
+*
+map_dungeon
+*
+map_guild
+*
+maps
+*
+map_empirewar
+d:/ymir work/pc/
+costume
+d:/ymir work/pc2/
+costume
+d:/ymir work/pc3/
+costume
+d:/ymir work/monster/
+monster
+d:/ymir work/monster2/
+monster2
+d:/ymir work/effect/
+effect
+d:/ymir work/zone/
+zone
+d:/ymir work/terrainmaps/
+terrain
+d:/ymir work/npc/
+npc
+d:/ymir work/npc2/
+npc2
+d:/ymir work/npc_pet/
+npc_pet
+d:/ymir work/npc_mount/
+npc_mount
+d:/ymir work/tree/
+tree
+d:/ymir work/guild/
+guild
+d:/ymir work/item/
+item
+textureset/
+textureset
+property/
+property
+icon/
+icon
+season/
+season
+season2/
+season
+metin2_map_a1/
+map_empire
+map_a2/
+map_patch1
+metin2_map_a3/
+map_empire
+metin2_map_b1/
+map_empire
+metin2_map_b3/
+map_empire
+metin2_map_c1/
+map_empire
+metin2_map_c3/
+map_empire
+map_n_snowm_01/
+map_patch1
+metin2_map_n_desert_01/
+map_patch1
+metin2_map_n_flame_01/
+map_patch1
+map_b_fielddungeon/
+map_dungeon
+metin2_map_t1/
+map_guild
+metin2_map_t2/
+map_guild
+metin2_map_t3/
+map_guild
+metin2_map_t4/
+map_guild
+metin2_map_wedding_01/
+map_event
+metin2_map_milgyo/
+map_patch1
+metin2_map_spiderdungeon/
+map_dungeon
+metin2_map_deviltower1/
+map_patch1
+metin2_map_monkeydungeon/
+map_dungeon
+metin2_map_monkeydungeon_02/
+map_dungeon
+metin2_map_monkeydungeon_03/
+map_dungeon
+metin2_map_guild_01/
+map_guild
+metin2_map_guild_02/
+map_guild
+metin2_map_guild_03/
+map_guild
+metin2_map_trent/
+map_patch1
+metin2_map_duel/
+map_event
+gm_guild_build/
+map_patch1
+sound/ambience/
+sound
+sound/common/
+sound
+sound/effect/
+sound
+sound/monster/
+sound
+sound/npc/
+sound
+sound/pc/
+sound
+sound/ui/
+sound
+sound/monster2/
+sound
+sound/pc2/
+sound
+d:/ymir work/special/
+etc
+d:/ymir work/environment/
+etc
+d:/ymir work/ui/
+etc
+uiscript/
+uiscript

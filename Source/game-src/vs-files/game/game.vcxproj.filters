@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{3c7760c9-f174-4205-92c8-6c638acdcb42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Networking">
+      <UniqueIdentifier>{cd8a6396-0bbc-4c4d-a8e7-47b8259c220d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Character">
+      <UniqueIdentifier>{82b58028-0aea-4a10-8ba0-fb0358294892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Item">
+      <UniqueIdentifier>{2c7112c3-26b8-46da-a755-08ddd0054071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Quest">
+      <UniqueIdentifier>{f724373f-a9eb-4109-8ecb-3d3a98fc97d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Map">
+      <UniqueIdentifier>{7ee1afcb-1e84-4239-95f6-e63959b3382c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Commands">
+      <UniqueIdentifier>{5c382bb6-b603-4fed-a832-f50059074fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\BlueDragon">
+      <UniqueIdentifier>{1eeee7d7-6ea3-48b9-9f82-dbf338962a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Guild">
+      <UniqueIdentifier>{ea9cb13d-75dd-4149-ae50-8d6a698d9793}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\game\src\affect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\ani.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\battle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\blend_item.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\buff_on_attributes.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\buffer_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\building.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\config.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\constants.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\crc32.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cube.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\db.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\dragon_soul_table.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\DragonSoul.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\dungeon.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\entity.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\entity_view.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\event.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\event_queue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\exchange.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\file_loader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\fishing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\FSM.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\gm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\group_text_parse_tree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\horse_rider.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\horsename_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\locale.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\locale_service.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\log.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\login_data.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\lzo_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\MarkConvert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\MarkImage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\MarkManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\marriage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\messenger_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\minilzo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\mining.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\mob_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\motion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\OXEvent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\party.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\PetSystem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\polymorph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\priv_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\pvp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\refine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\regen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\safebox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\sequence.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\shop.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\shop_manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\shopEx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\skill.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\skill_power.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\start_position.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\target.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\text_file_loader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\trigger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\utils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\vector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\version.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\vid.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\war_map.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\wedding.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\xmas_event.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_affect.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_battle.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_change_empire.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_dragonsoul.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_horse.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_item.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_manager.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_quickslot.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_resist.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_skill.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\char_state.cpp">
+      <Filter>src\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_auth.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_db.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_login.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_p2p.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_udp.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\p2p.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\packet_info.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questevent.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_affect.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_building.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_danceevent.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_dragonlair.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_dragonsoul.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_dungeon.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_game.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_global.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_guild.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_horse.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_item.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_marriage.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_npc.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_oxevent.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_party.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_pc.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_pet.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_quest.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questlua_target.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questmanager.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questnpc.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\questpc.cpp">
+      <Filter>src\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item_addon.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item_attribute.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item_manager.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item_manager_idrange.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\item_manager_read_tables.cpp">
+      <Filter>src\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\desc.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\desc_client.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\desc_manager.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\desc_p2p.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\sectree.cpp">
+      <Filter>src\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\sectree_manager.cpp">
+      <Filter>src\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\map_location.cpp">
+      <Filter>src\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cmd.cpp">
+      <Filter>src\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cmd_emotion.cpp">
+      <Filter>src\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cmd_general.cpp">
+      <Filter>src\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cmd_gm.cpp">
+      <Filter>src\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cmd_oxevent.cpp">
+      <Filter>src\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\BlueDragon.cpp">
+      <Filter>src\BlueDragon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\BlueDragon_Binder.cpp">
+      <Filter>src\BlueDragon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\cipher.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\input_main.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\DragonLair.cpp">
+      <Filter>src\BlueDragon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\guild.cpp">
+      <Filter>src\Guild</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\guild_manager.cpp">
+      <Filter>src\Guild</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\game\src\guild_war.cpp">
+      <Filter>src\Guild</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\game\src\affect.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\affect_flag.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\ani.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\any_function.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\battle.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\belt_inventory_helper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\blend_item.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\buff_on_attributes.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\buffer_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\building.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\crc32.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\cube.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\db.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\debug_allocator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\debug_allocator_adapter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\dragon_soul_table.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\DragonSoul.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\dungeon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\entity.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\event.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\event_queue.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\exchange.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\file_loader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\fishing.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\FSM.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\gm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\group_text_parse_tree.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\horse_rider.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\horsename_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\locale.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\locale_service.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\log.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\login_data.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\login_sim.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\lzo_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\MarkImage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\MarkManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\marriage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\messenger_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\minilzo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\mining.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\mob_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\motion.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\object_allocator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\OXEvent.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\party.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\PetSystem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\polymorph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\priv_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\profiler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\protocol.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\pvp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\refine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\regen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\safebox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\sequence.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\shop.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\shop_manager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\shopEx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\skill.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\skill_power.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\spam.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\stable_priority_queue.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\start_position.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\state.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\target.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\text_file_loader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\typedef.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\unique_item.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\utils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\vector.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\vid.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\war_map.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\wedding.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\xmas_event.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\char.h">
+      <Filter>src\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\char_manager.h">
+      <Filter>src\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\input.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\p2p.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\packet.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\packet_info.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\quest.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\questevent.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\questlua.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\questmanager.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\questnpc.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\questpc.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\item.h">
+      <Filter>src\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\item_addon.h">
+      <Filter>src\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\item_manager.h">
+      <Filter>src\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\item_manager_private_types.h">
+      <Filter>src\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\desc_p2p.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\desc.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\desc_client.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\desc_manager.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\sectree.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\sectree_manager.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\map_location.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\cmd.h">
+      <Filter>src\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\quest_sys_err.h">
+      <Filter>src\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\BlueDragon.h">
+      <Filter>src\BlueDragon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\BlueDragon_Binder.h">
+      <Filter>src\BlueDragon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\BlueDragon_Skill.h">
+      <Filter>src\BlueDragon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\cipher.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\DragonLair.h">
+      <Filter>src\BlueDragon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\guild.h">
+      <Filter>src\Guild</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\game\src\guild_manager.h">
+      <Filter>src\Guild</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\source\game\src\any_function.inc">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>

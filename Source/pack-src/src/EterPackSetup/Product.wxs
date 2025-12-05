@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="EterPackSetup" Language="1033" Version="1.0.0.0" Manufacturer="Heraion" UpgradeCode="e97a2e53-d0e8-4be5-a997-be5a75c49695">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate />
+
+    <Feature Id="ProductFeature" Title="[ProductName]" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="RegistryEntries" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="$(var.EterPackConsole.TargetName)" />
+      </Directory>
+    </Directory>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UIRef Id="WixUI_InstallDir" />
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="RegistryEntries" Guid="{07A97572-8501-445D-A942-D2362B38BDF1}" Win64="yes">
+
+        <!--EXTRACT FILE-->
+        <RegistryKey Root="HKCR" Key=".eix" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryKey Key="Settings" ForceCreateOnInstall="yes">
+            <RegistryValue Name="Path" Type="string" Value="[INSTALLFOLDER]$(var.EterPackConsole.TargetName)$(var.EterPackConsole.TargetExt)"/>
+          </RegistryKey>
+
+          <RegistryKey Key="shellex\ContextMenuHandlers\{013F278B-7813-4BD7-8667-CAD0A83C1008}" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+            <RegistryValue Type="string" Value="$(var.EterPackShell.TargetName).FileContextMenuExt"/>
+          </RegistryKey>
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR" Key="CLSID\{013F278B-7813-4BD7-8667-CAD0A83C1008}" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Value="$(var.EterPackShell.TargetName).FileContextMenuExt Class"/>
+          <RegistryKey Key="InprocServer32" ForceCreateOnInstall="yes">
+            <RegistryValue Type="string" Value="[INSTALLFOLDER]$(var.EterPackShell.TargetName)$(var.EterPackShell.TargetExt)"/>
+            <RegistryValue Name="ThreadingModel" Type="string" Value="Apartment"/>
+          </RegistryKey>
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="ProductComponent" Guid="{D7457110-48C2-418A-8334-D4EB7BB8CDB5}">
+        <File Source="$(var.EterPackConsole.TargetPath)" />
+        <File Source="$(var.EterPackShell.TargetPath)" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

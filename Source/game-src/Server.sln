@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "vs-files\game\game.vcxproj", "{239E9566-0797-4DCC-BBF3-06B0E70B9A66}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "db", "vs-files\db\db.vcxproj", "{00ACBC7F-38B1-4F77-82EE-C5097D83275A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "auth", "vs-files\auth\auth.vcxproj", "{E4B7AD00-27EE-4206-98B8-8B85622E376D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{A2C2A5C5-60C2-4395-8060-C8F597210F7F}"
+	ProjectSection(SolutionItems) = preProject
+		source\common\building.h = source\common\building.h
+		source\common\cache.h = source\common\cache.h
+		source\common\d3dtype.h = source\common\d3dtype.h
+		source\common\item_length.h = source\common\item_length.h
+		source\common\length.h = source\common\length.h
+		source\common\pool.h = source\common\pool.h
+		source\common\service.h = source\common\service.h
+		source\common\singleton.h = source\common\singleton.h
+		source\common\stl.h = source\common\stl.h
+		source\common\tables.h = source\common\tables.h
+		source\common\utils.h = source\common\utils.h
+		source\common\VnumHelper.h = source\common\VnumHelper.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{4E438794-DEC6-465A-8936-D5D719F0F994}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsql", "vs-files\libsql\libsql.vcxproj", "{62745E84-C57E-4D0B-815A-FD0A0725A6F9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libthecore", "vs-files\libthecore\libthecore.vcxproj", "{BE7BB054-64E8-40B2-8C72-197AA063EC6D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgame", "vs-files\libgame\libgame.vcxproj", "{98391ED1-7501-4CE1-81CF-1B65E59193F7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpoly", "vs-files\libpoly\libpoly.vcxproj", "{B8C58A0C-B12F-47AF-BA26-06BF798C14F3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game2", "vs-files\game2\game2.vcxproj", "{7FEFE6AC-3260-4225-ABD5-8D41D6F118BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239E9566-0797-4DCC-BBF3-06B0E70B9A66}.Debug|x86.ActiveCfg = Debug|Win32
+		{239E9566-0797-4DCC-BBF3-06B0E70B9A66}.Debug|x86.Build.0 = Debug|Win32
+		{239E9566-0797-4DCC-BBF3-06B0E70B9A66}.Release|x86.ActiveCfg = Release|Win32
+		{239E9566-0797-4DCC-BBF3-06B0E70B9A66}.Release|x86.Build.0 = Release|Win32
+		{00ACBC7F-38B1-4F77-82EE-C5097D83275A}.Debug|x86.ActiveCfg = Debug|Win32
+		{00ACBC7F-38B1-4F77-82EE-C5097D83275A}.Debug|x86.Build.0 = Debug|Win32
+		{00ACBC7F-38B1-4F77-82EE-C5097D83275A}.Release|x86.ActiveCfg = Release|Win32
+		{00ACBC7F-38B1-4F77-82EE-C5097D83275A}.Release|x86.Build.0 = Release|Win32
+		{E4B7AD00-27EE-4206-98B8-8B85622E376D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4B7AD00-27EE-4206-98B8-8B85622E376D}.Release|x86.ActiveCfg = Release|Win32
+		{E4B7AD00-27EE-4206-98B8-8B85622E376D}.Release|x86.Build.0 = Release|Win32
+		{62745E84-C57E-4D0B-815A-FD0A0725A6F9}.Debug|x86.ActiveCfg = Debug|Win32
+		{62745E84-C57E-4D0B-815A-FD0A0725A6F9}.Debug|x86.Build.0 = Debug|Win32
+		{62745E84-C57E-4D0B-815A-FD0A0725A6F9}.Release|x86.ActiveCfg = Release|Win32
+		{62745E84-C57E-4D0B-815A-FD0A0725A6F9}.Release|x86.Build.0 = Release|Win32
+		{BE7BB054-64E8-40B2-8C72-197AA063EC6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE7BB054-64E8-40B2-8C72-197AA063EC6D}.Debug|x86.Build.0 = Debug|Win32
+		{BE7BB054-64E8-40B2-8C72-197AA063EC6D}.Release|x86.ActiveCfg = Release|Win32
+		{BE7BB054-64E8-40B2-8C72-197AA063EC6D}.Release|x86.Build.0 = Release|Win32
+		{98391ED1-7501-4CE1-81CF-1B65E59193F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{98391ED1-7501-4CE1-81CF-1B65E59193F7}.Debug|x86.Build.0 = Debug|Win32
+		{98391ED1-7501-4CE1-81CF-1B65E59193F7}.Release|x86.ActiveCfg = Release|Win32
+		{98391ED1-7501-4CE1-81CF-1B65E59193F7}.Release|x86.Build.0 = Release|Win32
+		{B8C58A0C-B12F-47AF-BA26-06BF798C14F3}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8C58A0C-B12F-47AF-BA26-06BF798C14F3}.Debug|x86.Build.0 = Debug|Win32
+		{B8C58A0C-B12F-47AF-BA26-06BF798C14F3}.Release|x86.ActiveCfg = Release|Win32
+		{B8C58A0C-B12F-47AF-BA26-06BF798C14F3}.Release|x86.Build.0 = Release|Win32
+		{7FEFE6AC-3260-4225-ABD5-8D41D6F118BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{7FEFE6AC-3260-4225-ABD5-8D41D6F118BA}.Debug|x86.Build.0 = Debug|Win32
+		{7FEFE6AC-3260-4225-ABD5-8D41D6F118BA}.Release|x86.ActiveCfg = Release|Win32
+		{7FEFE6AC-3260-4225-ABD5-8D41D6F118BA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62745E84-C57E-4D0B-815A-FD0A0725A6F9} = {4E438794-DEC6-465A-8936-D5D719F0F994}
+		{BE7BB054-64E8-40B2-8C72-197AA063EC6D} = {4E438794-DEC6-465A-8936-D5D719F0F994}
+		{98391ED1-7501-4CE1-81CF-1B65E59193F7} = {4E438794-DEC6-465A-8936-D5D719F0F994}
+		{B8C58A0C-B12F-47AF-BA26-06BF798C14F3} = {4E438794-DEC6-465A-8936-D5D719F0F994}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29E241BB-C981-4091-9BE3-911D6EE7BAE1}
+	EndGlobalSection
+EndGlobal

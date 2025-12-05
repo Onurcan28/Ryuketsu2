@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\source\UserInterface\AccountConnector.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\AffectFlagContainer.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\CameraProcedure.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\GameType.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\GuildMarkDownloader.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\GuildMarkUploader.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\InsultChecker.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\Locale.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\MarkImage.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\MarkManager.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\NetworkActorManager.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\ProcessCRC.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\ProcessScanner.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\ServerStateChecker.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\ServerStateCheckerModule.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\StdAfx.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\UserInterface.cpp" />
+    <ClCompile Include="..\..\source\UserInterface\InstanceBase.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseBattle.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseEffect.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseEvent.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseMotion.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseMovement.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\InstanceBaseTransform.cpp">
+      <Filter>InstanceBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplication.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationCamera.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationCursor.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationEvent.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationLogo.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationProcedure.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonApplicationWebPage.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonBackground.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonBackgroundModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonCharacterManager.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonCharacterManagerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonCharacterModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonChat.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonChatModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonEffectModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonEventManager.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonEventManagerMoudle.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonExceptionSender.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonExchange.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonExchangeModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonFlyModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonGameEventManagerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonGuild.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonIME.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonIMEModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonItem.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonItemModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonMessenger.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonMiniMap.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonMiniMapModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkDatagram.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkDatagramModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStream.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamCommand.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamEvent.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseGame.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseGameActor.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseGameItem.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseHandShake.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseLoading.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseLogin.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseOffline.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNetworkStreamPhaseSelect.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNonPlayer.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonNonPlayerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPackModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayer.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerEventHandler.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerInput.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerInputKeyboard.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerInputMouse.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonPlayerSkill.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonProfilerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonQuest.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonSafeBox.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonShop.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonSkill.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonSoundManagerModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonSystem.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonSystemModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonTextTail.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\UserInterface\PythonTextTailModule.cpp">
+      <Filter>Python</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\UserInterface\AccountConnector.h" />
+    <ClInclude Include="..\..\source\UserInterface\AffectFlagContainer.h" />
+    <ClInclude Include="..\..\source\UserInterface\GameType.h" />
+    <ClInclude Include="..\..\source\UserInterface\GuildMarkDownloader.h" />
+    <ClInclude Include="..\..\source\UserInterface\GuildMarkUploader.h" />
+    <ClInclude Include="..\..\source\UserInterface\InsultChecker.h" />
+    <ClInclude Include="..\..\source\UserInterface\Locale.h" />
+    <ClInclude Include="..\..\source\UserInterface\MarkImage.h" />
+    <ClInclude Include="..\..\source\UserInterface\MarkManager.h" />
+    <ClInclude Include="..\..\source\UserInterface\NetworkActorManager.h" />
+    <ClInclude Include="..\..\source\UserInterface\Packet.h" />
+    <ClInclude Include="..\..\source\UserInterface\ProcessCRC.h" />
+    <ClInclude Include="..\..\source\UserInterface\ProcessScanner.h" />
+    <ClInclude Include="..\..\source\UserInterface\resource.h" />
+    <ClInclude Include="..\..\source\UserInterface\ServerStateChecker.h" />
+    <ClInclude Include="..\..\source\UserInterface\StdAfx.h" />
+    <ClInclude Include="..\..\source\UserInterface\Test.h" />
+    <ClInclude Include="..\..\source\UserInterface\InstanceBase.h">
+      <Filter>InstanceBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonApplication.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonBackground.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonCharacterManager.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonChat.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonEventManager.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonExceptionSender.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonExchange.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonGuild.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonIME.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonItem.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonMessenger.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonMiniMap.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonNetworkDatagram.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonNetworkStream.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonNonPlayer.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonPlayer.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonPlayerEventHandler.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonQuest.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonSafeBox.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonShop.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonSkill.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonSystem.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\PythonTextTail.h">
+      <Filter>Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\AbstractSingleton.h">
+      <Filter>Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\AbstractApplication.h">
+      <Filter>Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\AbstractCharacterManager.h">
+      <Filter>Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\AbstractChat.h">
+      <Filter>Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\AbstractPlayer.h">
+      <Filter>Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\UserInterface\Defines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\source\UserInterface\UserInterface.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\source\UserInterface\metin2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\source\UserInterface\Cursors\cursor.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_attack.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_buy.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_camera_rotate.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_chair.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_door.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_hsize.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_hvsize.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_no.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_pick.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_sell.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_talk.cur">
+      <Filter>cursor</Filter>
+    </None>
+    <None Include="..\..\source\UserInterface\Cursors\cursor_vsize.cur">
+      <Filter>cursor</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cursor">
+      <UniqueIdentifier>{7ce873fd-3dbb-4fc2-83e8-c2cfc1f5e66a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InstanceBase">
+      <UniqueIdentifier>{3a71f175-ca1d-46fe-84ba-cb5dbdcf6090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Python">
+      <UniqueIdentifier>{75ae6bdb-5e3c-4be7-80b7-8b197daf3936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Abstract">
+      <UniqueIdentifier>{83ed6de8-0362-4a7b-9088-5292ad9228b9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

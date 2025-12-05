@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{0acd738c-16c8-4ade-8e9e-2c81e36fd165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ClientManager">
+      <UniqueIdentifier>{e81366fe-5869-4a2a-a11f-23d9ebe2cb91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\db\src\Cache.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\Config.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\CsvReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\DBManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\GuildManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ItemAwardManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ItemIDRangeManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\LoginData.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\Main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\Marriage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\NetBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\Peer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\PeerBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\PrivManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ProtoReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\version.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerPlayer.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManager.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerBoot.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerEventFlag.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerGuild.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerHorseName.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerLogin.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\db\src\ClientManagerParty.cpp">
+      <Filter>src\ClientManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\db\src\Cache.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\Config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\CsvReader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\DBManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\GuildManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\ItemAwardManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\ItemIDRangeManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\LoginData.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\Main.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\Marriage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\NetBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\Peer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\PeerBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\PrivManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\ProtoReader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\QID.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\db\src\ClientManager.h">
+      <Filter>src\ClientManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\source\dump_proto\CsvFile.cpp" />
+    <ClCompile Include="..\..\source\dump_proto\dump_proto.cpp" />
+    <ClCompile Include="..\..\source\dump_proto\ItemCSVReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\dump_proto\CsvFile.h" />
+    <ClInclude Include="..\..\source\dump_proto\ItemCSVReader.h" />
+    <ClInclude Include="..\..\source\dump_proto\StdAfx.h" />
+  </ItemGroup>
+</Project>
