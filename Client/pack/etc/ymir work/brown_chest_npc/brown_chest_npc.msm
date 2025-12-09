@@ -1,0 +1,56 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "d:/ymir work/npc/brown_chest_npc/brown_chest_npc.gr2"
+
+Group ShapeData
+{
+    PathName 		 "d:\ymir work\npc\brown_chest_npc\"
+    ShapeDataCount 		 1
+    Group ShapeData00
+    {
+        ShapeIndex 		 0
+        Model 		 "brown_chest_npc.gr2"
+        SourceSkin 		 "brown_chest_npc_1.dds"
+        TargetSkin 		 "brown_chest_npc_1.dds"
+    }
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "STEAP_ROOT"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           64.000000
+            Position         0.000000 0.000000 35.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "STEAP_ROOT"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           82.000000
+            Position         0.000000 0.000000 40.000000
+        }
+    }
+}
