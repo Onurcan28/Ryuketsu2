@@ -3221,3 +3221,39 @@ int CInputDead::Analyze(LPDESC d, BYTE bHeader, const char * c_pData)
 
 	return (iExtraLen);
 }
+#ifdef ENABLE_AUTO_BUFF_NPC
+    // NPC Buffsystem beim Anklicken
+    if (pVictim && pVictim->GetRaceNum() == 20094)
+    {
+        LPCHARACTER ch = pChar; // Spieler
+        if (!ch || ch->IsDead())
+            return;
+
+        const DWORD buffs[] =
+        {
+            94,
+            95,
+            96,
+            110,
+            111
+        };
+
+        // Prüfen, ob Buffs aktiv sind
+        if (ch->IsAffectFlag(AFF_HOSIN) ||
+            ch->IsAffectFlag(AFF_BOHO) ||
+            ch->IsAffectFlag(AFF_GICHEON) ||
+            ch->IsAffectFlag(AFF_KWAESOK) ||
+            ch->IsAffectFlag(AFF_JEUNGRYEOK))
+        {
+            ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte sind bereits aktiv.");
+            return;
+        }
+
+        // Buffs anwenden
+        for (DWORD skill : buffs)
+            ch->UseSkill(skill, ch);
+
+        ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte aktiviert.");
+        return;
+    }
+#endif
