@@ -50,7 +50,7 @@ REGION_NAME_DICT = {0: "GERMANY"}
 REGION_DICT = {
 	0: {
 		1: {"name":"Windows",		"channel":SERVER1_CHANNELS},
-		2: {"name":"FreeBSD",		"channel":SERVER2_CHANNELS},
+		2: {"name":"Ryuketsu2",		"channel":SERVER2_CHANNELS},
 		3: {"name":"FreeBSD Local",	"channel":SERVER3_CHANNELS},
 	}
 }
