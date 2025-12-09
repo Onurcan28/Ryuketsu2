@@ -4647,10 +4647,9 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 	pkChrCauser->SetQuestNPCID(GetVID());
 	
 #ifdef ENABLE_AUTO_BUFF_NPC
-    // Buff-NPC: klicken → Buffs erhalten
-    if (GetRaceNum() == 20094) // dein Buff-NPC VNUM
+    if (GetRaceNum() == 20094)
     {
-        LPCHARACTER ch = pkChr; // der klickende Spieler
+        LPCHARACTER ch = pkChrCauser;
         if (!ch || ch->IsDead())
             return true;
 
@@ -4663,7 +4662,6 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
             111  // Jeungryeok   (Attack)
         };
 
-        // Prüfen, ob schon einer der Buffs aktiv ist
         bool hasActive = false;
 
         if (ch->IsAffectFlag(AFF_HOSIN))        hasActive = true;
@@ -4678,13 +4676,12 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
             return true;
         }
 
-        // Buffs anwenden
         for (DWORD skill : buffs)
-            ch->UseSkill(skill, ch);  // WICHTIG: UseSkill statt ComputeSkill!
+            ch->UseSkill(skill, ch);
 
         ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte aktiviert.");
 
-        return true; // verhindert weitere Klick-Aktionen (Shop, Quest usw.)
+        return true;
     }
 #endif
 
