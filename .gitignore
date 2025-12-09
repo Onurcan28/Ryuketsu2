@@ -59,3 +59,7 @@ Client/config.cfg
 # Ignore build quests
 Locale-Server/germany/quest/object/*
 Locale-Server/germany/quest/pre_qc/*
+
+# Ignore build folders
+/Source/binary-src/bin/Release
+/Source/binary-src/bin/Debug
