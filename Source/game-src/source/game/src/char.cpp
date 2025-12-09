@@ -4645,6 +4645,49 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 	}
 
 	pkChrCauser->SetQuestNPCID(GetVID());
+	
+#ifdef ENABLE_AUTO_BUFF_NPC
+    // Buff-NPC: klicken → Buffs erhalten
+    if (GetRaceNum() == 20094) // dein Buff-NPC VNUM
+    {
+        LPCHARACTER ch = pkChr; // der klickende Spieler
+        if (!ch || ch->IsDead())
+            return true;
+
+        const DWORD buffs[] =
+        {
+            94,  // Hosin        (Defense)
+            95,  // Boho         (Reflect)
+            96,  // Gicheon      (Crit)
+            110, // Kwaesok      (Speed)
+            111  // Jeungryeok   (Attack)
+        };
+
+        // Prüfen, ob schon einer der Buffs aktiv ist
+        bool hasActive = false;
+
+        if (ch->IsAffectFlag(AFF_HOSIN))        hasActive = true;
+        if (ch->IsAffectFlag(AFF_BOHO))         hasActive = true;
+        if (ch->IsAffectFlag(AFF_GICHEON))      hasActive = true;
+        if (ch->IsAffectFlag(AFF_KWAESOK))      hasActive = true;
+        if (ch->IsAffectFlag(AFF_JEUNGRYEOK))   hasActive = true;
+
+        if (hasActive)
+        {
+            ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte sind bereits aktiv.");
+            return true;
+        }
+
+        // Buffs anwenden
+        for (DWORD skill : buffs)
+            ch->UseSkill(skill, ch);  // WICHTIG: UseSkill statt ComputeSkill!
+
+        ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte aktiviert.");
+
+        return true; // verhindert weitere Klick-Aktionen (Shop, Quest usw.)
+    }
+#endif
+
 
 	if (quest::CQuestManager::instance().Click(pkChrCauser->GetPlayerID(), this))
 	{
