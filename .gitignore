@@ -35,6 +35,7 @@ Source/game-src/source/**/*.exe
 
 Source/binary-src/source/db/db
 Source/binary-src/source/db/src/Depend
+Source/binary-src/vs_files/**/*.lib
 Source/binary-src/source/**/*.lib
 Source/binary-src/source/**/*.exe
 
