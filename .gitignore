@@ -47,8 +47,8 @@ Client/Metin2Debug.exe
 Client/screenshot/*
 Client/pack/*.epk
 Client/pack/*.eix
-Client/logs/log.txt
-Client/logs/syserr.txt
+Client/log.txt
+Client/syserr.txt
 Client/ErrorLog.txt
 Client/channel.inf
 Client/metin2.cfg
