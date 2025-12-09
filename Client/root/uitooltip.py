@@ -83,6 +83,7 @@ class ToolTip(ui.ThinBoard):
 	CAN_LEVEL_UP_COLOR = 0xff8EC292
 	CANNOT_LEVEL_UP_COLOR = DISABLE_COLOR
 	NEED_SKILL_POINT_COLOR = 0xff9A9CDB
+	ITEMVNUM_COLOR = 0xff90ee90
 
 	def __init__(self, width = TOOL_TIP_WIDTH, isPickable=FALSE):
 		ui.ThinBoard.__init__(self, "TOP_MOST")
@@ -1174,8 +1175,11 @@ class ItemToolTip(ToolTip):
 		self.__SetItemTitle(itemVnum, metinSlot, attrSlot)
 		
 		### Hair Preview Image ###
-		if self.__IsHair(itemVnum):	
+		if self.__IsHair(itemVnum):
 			self.__AppendHairIcon(itemVnum)
+
+		if chr.IsGameMaster(player.GetMainCharacterIndex()):
+			self.AppendTextLine(localeInfo.ITEM_VNUM_TOOLTIP % (int(itemVnum)), self.ITEMVNUM_COLOR)
 
 		### Description ###
 		self.AppendDescription(itemDesc, 26)
