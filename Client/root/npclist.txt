@@ -2440,3 +2440,4 @@
 34132	valentine_2020_dog_1
 34133	summer_2020_crustacean
 34134	summer_2020_crustacean
+40000	brown_chest_npc
