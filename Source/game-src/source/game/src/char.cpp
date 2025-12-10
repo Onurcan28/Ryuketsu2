@@ -4651,7 +4651,7 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
     {
         LPCHARACTER ch = pkChrCauser;
         if (!ch || ch->IsDead())
-            return true;
+            return;
 
         const DWORD buffs[] =
         {
@@ -4673,7 +4673,7 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
         if (hasActive)
         {
             ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte sind bereits aktiv.");
-            return true;
+            return;
         }
 
         for (DWORD skill : buffs)
@@ -4681,7 +4681,7 @@ void CHARACTER::OnClick(LPCHARACTER pkChrCauser)
 
         ch->ChatPacket(CHAT_TYPE_INFO, "[BUFF] Effekte aktiviert.");
 
-        return true;
+        return;
     }
 #endif
 
