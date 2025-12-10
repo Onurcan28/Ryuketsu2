@@ -16,6 +16,7 @@
 *.tlog
 *.sbr
 *.bsc
+*.exp
 *.map
 *.cod
 *.log
@@ -63,3 +64,9 @@ Locale-Server/germany/quest/pre_qc/*
 # Ignore build folders
 /Source/binary-src/bin/Release
 /Source/binary-src/bin/Debug
+
+# Ignore build folders
+/Source/game-src/vs-files/**/Release
+/Source/game-src/vs-files/**/Debug
+/Source/game-src/bin/channel1/game_d.exe
+/Source/game-src/bin/db/db_d.exe
