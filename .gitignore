@@ -41,7 +41,13 @@ Source/binary-src/source/**/*.lib
 Source/binary-src/source/**/*.exe
 
 # Windows Server
-WServer/
+Server/**/syserr.txt
+Server/**/syslog.txt
+Server/**/p2p_packet_info.txt
+Server/**/packet_info.txt
+Server/**/PTS.txt
+Server/**/stdout
+Server/**/VERSION.txt
 
 # Client files
 Client/Metin2Release.exe

@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Neues Profil",
+    "Projects": [
+      {
+        "Path": "vs-files\\game\\game.vcxproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "vs-files\\db\\db.vcxproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "vs-files\\auth\\auth.vcxproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "vs-files\\game2\\game2.vcxproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
