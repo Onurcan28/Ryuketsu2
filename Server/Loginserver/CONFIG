@@ -10,6 +10,6 @@ PASSES_PER_SEC: 25
 SAVE_EVENT_SECOND_CYCLE: 180
 PING_EVENT_SECOND_CYCLE: 180
 AUTH_SERVER: master
-SQL_PLAYER: localhost root password account 3317
-SQL_COMMON: localhost root password common 3317
-SQL_LOG: localhost root password log 3317
+SQL_PLAYER: localhost root fratello account 3317
+SQL_COMMON: localhost root fratello common 3317
+SQL_LOG: localhost root fratello log 3317

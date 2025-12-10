@@ -8,9 +8,9 @@ MAP_ALLOW: 81 112 113 103 105 110 111 351 216 150 154 155 156 157 158
 PASSES_PER_SEC: 25
 SAVE_EVENT_SECOND_CYCLE: 180
 PING_EVENT_SECOND_CYCLE: 180
-SQL_PLAYER: localhost root password player 3317
-SQL_COMMON: localhost root password common 3317
-SQL_LOG: localhost root password log 3317
+SQL_PLAYER: localhost root fratello player 3317
+SQL_COMMON: localhost root fratello common 3317
+SQL_LOG: localhost root fratello log 3317
 NO_PK: 1
 VIEW_RANGE: 8000
 MAX_LEVEL: 200

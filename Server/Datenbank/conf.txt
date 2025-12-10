@@ -1,8 +1,8 @@
 WELCOME_MSG = "DB Server has been started"
 
-SQL_PLAYER = "localhost player root password 3317"
-SQL_ACCOUNT = "localhost account root password 3317"
-SQL_COMMON = "localhost common root password 3317"
+SQL_PLAYER = "localhost player root fratello 3317"
+SQL_ACCOUNT = "localhost account root fratello 3317"
+SQL_COMMON = "localhost common root fratello 3317"
 
 TABLE_POSTFIX = ""
 NO_TXT = 1
