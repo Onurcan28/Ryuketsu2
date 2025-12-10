@@ -1,0 +1,16 @@
+services:
+  db-ryuketsu2:
+    image: mariadb:10.6.22
+    container_name: ryuketsu2_db_container
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MARIADB_DATABASE: mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3317:3306"
+    restart: on-failure:3
+    volumes:
+      - ryuketsu2-dbdata:/var/lib/mysql
+
+volumes:
+  ryuketsu2-dbdata:
